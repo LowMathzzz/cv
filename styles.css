@@ -1,0 +1,89 @@
+/* Harvard-style resume: Times, centered header, ruled section titles, right-aligned dates */
+:root { --fs: 16px; }
+
+* { box-sizing: border-box; }
+
+body {
+  background: #fffee4;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: var(--fs);
+  color: #000;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.toolbar {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.toolbar button {
+  font: 13px Arial, sans-serif;
+  padding: 6px 12px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.toolbar button:hover { background: #eee; }
+.toolbar button.on { background: #000; color: #fff; }
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+header { text-align: center; margin-bottom: 14px; }
+header h1 { font-size: 1.9em; font-weight: 700; margin: 0 0 2px; }
+header p { margin: 2px 0; }
+header a { color: #4a86c5; text-decoration: none; }
+header a:hover { text-decoration: underline; }
+hr { border: 0; border-top: 1px solid #d3d3d3; margin: 14px 0 0; }
+.icons a { display: inline-flex; align-items: center; gap: 4px; margin: 0 8px; }
+.icons img { width: 16px; height: 16px; }
+
+h2 {
+  font-size: 1.15em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 18px 0 8px;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 1px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.row .meta { white-space: nowrap; text-align: right; }
+.row .meta span { margin-left: 14px; }
+
+ul { margin: 2px 0 10px; padding-left: 4.4em; }
+ul li { margin: 0 0 1px; }
+
+
+@media print {
+  /* margin 0 hides the browser's date/title/URL header and footer */
+  @page { size: A4; margin: 0; }
+  :root { --fs: 10.5pt; }
+  .toolbar { display: none; }
+  /* clone repeats the padding on every page, so page breaks keep their margins */
+  .page { margin: 0; padding: 14mm 15mm; max-width: none; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  h2, .row { break-after: avoid; }
+  li { break-inside: avoid; }
+}
+
+@media (max-width: 640px) {
+  .row { flex-direction: column; gap: 0; }
+  .row .meta { text-align: left; }
+  .row .meta span { margin: 0 14px 0 0; }
+  ul { padding-left: 1.4em; }
+}
