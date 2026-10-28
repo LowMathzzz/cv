@@ -45,20 +45,21 @@
         expDate: 'Dic 2025 – Sep 2026',
         expItems: [
           'Desarrollé de punta a punta <b>AAS-NET</b>, un CRM para corredores de seguros que centraliza pólizas, cuotas y vencimientos, siniestros, clientes y subagentes, y reportes exportables.',
-          'Construí el backend monolítico de la plataforma: lógica de negocio, API REST y modelo de datos para operar toda la cartera desde un solo sistema.',
-          'Aseguré la API con autenticación JWT y estándares de hardening, con acceso por roles y permisos para subagentes, administrativos y gerentes.',
-          'Implementé el cifrado de la base de datos y reforcé la seguridad del frontend para proteger la información sensible de clientes y pólizas.',
-          'Entregué el sistema completo hasta su culminación, trabajando de forma remota y coordinando con el equipo en sitio cuando fue necesario.'
+          'Construí un backend modular en Spring Boot 3 y Java 21: lógica de negocio, API REST documentada en OpenAPI y modelo de datos en PostgreSQL para operar toda la cartera desde un solo sistema.',
+          'Aseguré la API con autenticación stateless (Spring Security + JWT) y hardening —validación de entrada, rate limiting, cabeceras seguras—, con control de acceso por roles (RBAC) para subagentes, administrativos y gerentes.',
+          'Implementé el cifrado de datos sensibles en reposo y reforcé la seguridad del frontend para proteger la información de clientes y pólizas.',
+          'Contenericé la aplicación con Docker y automaticé build y despliegue con CI/CD en GitHub Actions; entregué el sistema completo trabajando de forma remota y coordinando con el equipo en sitio.'
         ],
         projects: 'PROYECTOS',
         projRole: 'Plataforma web de gestión operativa para restaurantes y parrillas',
         projPlace: 'Proyecto personal',
         projDate: '2025 – Presente',
         projItems: [
-          'Plataforma modular de gestión operativa: asistencia y planilla, gastos y cuentas por pagar, conciliación de ventas, inventarios con recetas y recepción de productos.',
-          'Automatización del procesamiento de archivos Excel (biométrico, reportes de ventas, pedidos de proveedores) para calcular tardanzas, descuentos y sueldos.',
-          'Seguridad por capas: cifrado de datos sensibles, control de acceso por roles, sesiones con expiración y protección contra abuso.',
-          '<i>Stack:</i> Python, Flask, MySQL, pandas, Jinja2, Chart.js.'
+          'Plataforma SaaS modular de gestión operativa: asistencia y planilla, gastos y cuentas por pagar, conciliación de ventas, inventario por recetas y recepción de mercadería.',
+          'Ingesta automática de archivos Excel (biométrico, reportes de ventas, pedidos de proveedores) con Apache POI y procesamiento asíncrono, alimentando un motor de cálculo de tardanzas, descuentos y sueldos.',
+          'Frontend en React y TypeScript con dashboards de ventas, costos y personal.',
+          'Seguridad por capas: cifrado de datos sensibles, RBAC con Spring Security, sesiones con expiración en Redis y rate limiting; desplegado con Docker en AWS.',
+          '<i>Stack:</i> Java 21, Spring Boot 3, PostgreSQL, Redis, React, TypeScript, Docker, AWS.'
         ],
         skills: 'HABILIDADES TÉCNICAS',
         skillRows: [
@@ -81,7 +82,7 @@
           'Spring Boot — Curso',
           'Flutter — Curso de desarrollo móvil',
           'Desarrollo de Microservicios — Curso',
-          'Analista de Ciberseguridad — En proceso'
+          'Backend Developer — En proceso'
         ]
       },
       en: {
@@ -113,20 +114,21 @@
         expDate: 'Dec 2025 – Sep 2026',
         expItems: [
           'Built <b>AAS-NET</b> end to end, a CRM for insurance brokers that centralizes policies, installments and due dates, claims, clients and sub-agents, and exportable reports.',
-          'Built the platform’s monolithic backend: business logic, REST API and data model to run the whole portfolio from a single system.',
-          'Secured the API with JWT authentication and hardening standards, with role-based access for sub-agents, administrative staff and managers.',
-          'Implemented database encryption and hardened frontend security to protect sensitive client and policy data.',
-          'Delivered the complete system through to completion, working remotely and coordinating with the on-site team when needed.'
+          'Built a modular Spring Boot 3 / Java 21 backend: business logic, a REST API documented in OpenAPI and a PostgreSQL data model to run the whole portfolio from a single system.',
+          'Secured the API with stateless authentication (Spring Security + JWT) and hardening —input validation, rate limiting, secure headers—, with role-based access control (RBAC) for sub-agents, administrative staff and managers.',
+          'Implemented encryption of sensitive data at rest and hardened frontend security to protect client and policy data.',
+          'Containerized the app with Docker and automated build and deployment with CI/CD on GitHub Actions; delivered the complete system working remotely and coordinating with the on-site team.'
         ],
         projects: 'PROJECTS',
         projRole: 'Operations management web platform for restaurants and grills',
         projPlace: 'Personal project',
         projDate: '2025 – Present',
         projItems: [
-          'Modular operations platform: attendance and payroll, expenses and accounts payable, sales reconciliation, recipe-based inventory and product receiving.',
-          'Automated Excel file processing (biometric, sales reports, supplier orders) to compute tardiness, deductions and salaries.',
-          'Layered security: sensitive data encryption, role-based access control, expiring sessions and abuse protection.',
-          '<i>Stack:</i> Python, Flask, MySQL, pandas, Jinja2, Chart.js.'
+          'Modular SaaS operations platform: attendance and payroll, expenses and accounts payable, sales reconciliation, recipe-based inventory and goods receiving.',
+          'Automatic ingestion of Excel files (biometric, sales reports, supplier orders) with Apache POI and asynchronous processing, feeding a calculation engine for tardiness, deductions and salaries.',
+          'React and TypeScript frontend with sales, cost and staff dashboards.',
+          'Layered security: sensitive data encryption, RBAC with Spring Security, expiring sessions in Redis and rate limiting; deployed with Docker on AWS.',
+          '<i>Stack:</i> Java 21, Spring Boot 3, PostgreSQL, Redis, React, TypeScript, Docker, AWS.'
         ],
         skills: 'TECHNICAL SKILLS',
         skillRows: [
@@ -149,7 +151,7 @@
           'Spring Boot — Course',
           'Flutter — Mobile development course',
           'Microservices Development — Course',
-          'Cybersecurity Analyst — In progress'
+          'Backend Developer — In progress'
         ]
       }
     };
